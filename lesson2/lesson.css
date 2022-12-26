@@ -1,0 +1,63 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 1000px;
+  height: 500px;
+  background-color: aqua;
+  margin: auto;
+  overflow: hidden;
+}
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  /* !название анимации */
+  /* animation-name: blockAnimation; */
+  /*! время за которое должен пройти один цикл анимации */
+  /* animation-duration: 5s; */
+  /* !настройка ускорения анимации */
+  /* animation-timing-function: ease-out; */
+  /*! настройка задержки перед началом анимации */
+  /* animation-delay: 2s; */
+  /*! определяет количество повторений анимации */
+  /* animation-iteration-count: infinite; */
+  /* !дает возможность при каждом повторе анимации идти по альтернативному пути */
+  /* animation-direction: alternate; */
+
+  animation: blockAnimation2 5s ease-out 1s infinite alternate;
+}
+
+@keyframes blockAnimation {
+  /* from - от каких свойств начинать */
+  from {
+    margin-top: 0;
+  }
+
+  /* to - до каких свойств измениться */
+  to {
+    margin-top: 300px;
+    margin-left: 800px;
+  }
+}
+@keyframes blockAnimation2 {
+  0% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 160px;
+    margin-left: 400px;
+  }
+
+  80% {
+    margin-top: 300px;
+    margin-left: 800px;
+  }
+  100% {
+    margin-top: 0;
+    margin-left: 800px;
+  }
+}
